@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Waypoint CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+        <!-- Counter Up CND -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <style>
+
+html{
+    scroll-behavior: smooth;
+
+}
+*{
+    margin: 0; padding:0; box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+.nav_style{
+    background: linear-gradient(57deg, #000000, #03011a ); 
+    
+    
+
+}
+.nav_style a{ 
+    color: white;
+    font-family: 'Comic Neue', cursive; 
+}
+
+
+/*/////////////////////////////////main header\\\\\\\\\\\\\\\\\\*/
+.main_header{
+    height: 100%;
+    width:100%;
+    background: linear-gradient(57deg, #000000, #03011a ); 
+    width: 100%;
+    height: 100%;
+    background-repeat:repeat;
+    background-size: cover ;
+    background-position: center;
+  
+}
+
+.rightside {
+    
+    color: white;
+}
+
+
+.corona_rotate img{
+    animation: gocorona 3s linear infinite;
+}
+
+@keyframes gocorona{
+    0%{    transform: rotate(0);  }
+  100% {    transform: rotate(360deg);  }
+}
+
+
+.leftside img{
+    animation: Big_corona 3s linear infinite;
+    width: 100%;
+    height:100%;
+}
+
+@keyframes Big_corona{
+     0%{    transform: scale(  1);  }
+    20%{    transform: scale(.75);  }
+    40%{    transform: scale(  1);  }
+    60%{    transform: scale(.75);  }
+    80%{    transform: scale(  1);  }
+   100% {   transform: scale(  1);  }
+}
+
+
+
+
+
+.footer_style{
+    background-color: #4C4C4C;
+}
+
+.footer_style p{
+    margin-bottom: 0;
+}
+
+
+</style></head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-lg nav_style p-3">
+  <a class="navbar-brand pl-5" href="#">COVID-19</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto pr-5">
+      <li class="nav-item active">
+        <a class="nav-link" href="\">HOME<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="index.html#aboutid">ABOUT</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="index.html#detectid">DETECT</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="index.html#sympid">SYMPTOMS</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="index.html#previd">PREVENTION</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="index.html#contactid">CONTACT US</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+</nav>
+
+
+
+
+
+
+
+<!-- Logo & Main Div -->
+        <div class="main_header">
+            <div class="row w-100 h-100">
+                <div class="col-lg-7 col-md-7 col-12 order-lg-1 order-2">
+                    <div class="leftside  w-100 h-100 d-flex justify-content-center align-items-center">
+                        </br>
+                        </br>
+                        </br>
+                        </br><img  src="{{ url_for('static', filename='images/back.png')}}">
+                        </br>
+                        </br>
+                        </br></br></br>
+
+
+
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 col-12 order-lg-2 order-1">
+                    <div class="rightside  w-100 h-100   justify-content-center align-items-center">
+                        </br>
+                        </br>
+                        </br></br></br></br></br></br>
+                        <h2>Your COVID-19 result is : </h2>
+                        <h4>Positive chances : {{   res.positive * 100 }}% </br> Negative chances : {{   res.negative * 100 }}%</br></br><h3>In Detail :</h3> </br></h4>
+                       
+                        {% if  res.positive > 0.5 %}
+                        <h2><b>You are COVID POSITIVE.</b></h2>
+                        <h2><a>Your chances of covid positive is <h1><b>{{   res.positive *100}}%</b></h1></a></h2>
+                       {% endif %}
+
+{% if  res.positive == 0.5 %}
+<h2><b>you may covid positive, may be negative.</b></h2>
+
+<h2><a>your chances of covid  is <b>{{   res *100}}</b>%</a></h2>
+{% endif %}
+
+{% if  0.5 > res.positive %}
+<h2><b>you are covid negative.</b></h2>
+<h3><a>your chances of covid positive is <h1>{{   res.positive *100}}</h1>%</a></h3>
+{% endif %}
+
+
+                       </br></br></br></br></br></br> 
+                    </div>  
+
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Contact with us -->
+        <section class="contact">
+            <div class="container-fluid pt-5 pb-5" id="contactid">
+                <div class="section_header text-center mb-5 mt-4">
+                    <h1> Plese fill this form !! </h1>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 col-12">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfsvzuUf01zoyxf7rdfMcR3o7-7a8B3S5SZLeeBXpOuDcuEHA/viewform?embedded=true" width="640" height="1700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+         <!-- footer -->
+    <footer>
+    <div class="footer_main_div">
+    <h3 class="text-center" >Welcome to COVID-19 DETECTION WEBSITE !!</h3>
+   <p class="text-center">Upload Your X-RAY And Get The Result : COVID + or COVID -</p>
+   <p class="text-center"> As always "Prevention is better than cure".so in this COVID-19 pandemic,we are just trying to help citizens to maintain the basic pevention i.e. SOCIAL DISTANCING.</br>If the symptonms are in favour of covid-19 . </br>Just get a X-RAY Done and analyse on this platform if result is POSITIVE  then consult the SPECIALIST otherwise </br>STAY HOME , STAY SAFE </p>
+    <div class="join text-center "><a href=""  >Join for free →</a></div>
+  <div class="footer-social-icons">
+      <ul>
+          
+          <li><a href="https://www.linkedin.com/in/ruchir-toshniwal-328b92152" target="blank"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/ruchirtoshniwal" target="blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="link https://t.me/ruchirtoshniwal" target="blank"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+      </ul>
+  </div>
+
+  <div class="footer-menu-one">
+      <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#aboutid">SYMPTOMS</a></li>
+          <li><a href="#sympid">Services</a></li>
+          <li><a href="#detectid">DETECT</a></li>
+          <li><a href="#previd">PREVENTION</a></li>
+        
+          <li><a href="#contactid">Contact us</a></li>  
+
+      </ul> 
+  </div>
+
+  <div class="footer-menu-two">
+       
+  </div>
+
+  <div class="footer-menu-two">
+      <ul>
+          <li><a href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses">FAQ</a></li>
+          <li><a href="#contactid">Query</a></li>
+
+    
+
+      </ul> 
+  </div>
+
+   </div>
+   <div class="footer-bottom">
+    <p>Proudly Design by: <a href="#">RUCHIR TOSHNIWAL</a></p>
+
+  </div>
+
+
+
+
+</body>

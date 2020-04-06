@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Waypoint CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+        <!-- Counter Up CND -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <style>
+
+html{
+    scroll-behavior: smooth;
+
+}
+*{
+    margin: 0; padding:0; box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+.nav_style{
+    background: linear-gradient(57deg, #000000, #03011a ); 
+    
+    
+
+}
+.nav_style a{ 
+    color: white;
+    font-family: 'Comic Neue', cursive; 
+}
+
+
+/*/////////////////////////////////main header\\\\\\\\\\\\\\\\\\*/
+.main_header{
+    height: 100%;
+    width:100%;
+    background: linear-gradient(57deg, #000000, #03011a ); 
+}
+
+.rightside h1{
+    font-size: 3rem;
+    color: white;
+}
+
+
+.corona_rotate img{
+    animation: gocorona 3s linear infinite;
+}
+
+@keyframes gocorona{
+    0%{    transform: rotate(0);  }
+  100% {    transform: rotate(360deg);  }
+}
+
+
+.leftside img{
+    animation: Big_corona 3s linear infinite;
+}
+
+@keyframes Big_corona{
+     0%{    transform: scale(  1);  }
+    20%{    transform: scale(.75);  }
+    40%{    transform: scale(  1);  }
+    60%{    transform: scale(.75);  }
+    80%{    transform: scale(  1);  }
+   100% {   transform: scale(  1);  }
+}
+
+
+
+
+/*/////////////////////////////////corona update\\\\\\\\\\\\\\\\\\*/
+
+.corona_update h3{
+    font-family: 'Gotu', sans-serif;
+
+
+}
+.corona_update{
+    background: linear-gradient(to right, #1a2980, #26D0CE); 
+    color:white;
+}
+.update_button{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2;
+    background-color: transparent;
+    
+    margin-right: 15px;
+    border: 1px solid black;
+
+
+
+}
+.update_button a{
+    color: #000000;
+}
+.update_button:hover{
+    background-color: #000000;
+    
+}
+.update_button a:hover{
+    color: white;
+}
+
+
+/*///////////////////////////////////////////*/
+.about_corona{
+    background: linear-gradient(to right, #CC95C0, #DBD4B4,#7AA1D2);
+}
+
+.btn_2:hover {
+    background-color: black;
+
+}
+.btn_2 {
+  display: inline-block;
+  padding: 16px 45px;
+  text-align: center;
+  font-size: 14px;
+  background-color: black;
+  color: #ffffff;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  background-size: 200% auto;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.sub-section{
+    background-color: #fbfafd;
+}
+/*////////////////////////////////////*/
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer_style{
+    background-color: #4C4C4C;
+}
+
+.footer_style p{
+    margin-bottom: 0;
+}
+
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    right: 40px;
+    bottom: 25px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #00a8ff;
+    color: white;
+    cursor: pointer;
+    height: 35px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#myBtn:hover{
+    background: 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text-center{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+
+.footer_main_div {
+ 
+   width: 100%;
+   height: auto;
+   margin: auto;
+   background: #272727;
+   padding:20px 0px;
+   color:white;
+  
+}
+
+.join a{
+   color: white;
+  
+}
+
+.footer-social-icons{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.footer-social-icons ul{
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.footer-social-icons ul li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0px 10px;
+  border-radius: 100%;
+  background:  #808080;
+}
+.footer-social-icons ul li a{
+  color: #272727;
+  font-size: 25px;
+    transition:0.6s ease;
+}
+.footer-social-icons ul li a i{
+  line-height: 50px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.footer-menu-one{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.footer-menu-one ul{
+  margin: 0px;
+  padding:0px;
+  text-align: center;
+}
+
+.footer-menu-one ul li{
+  display: inline-block;
+  margin: 0px 15px;
+}
+
+.footer-menu-one ul li a{
+  font-family: arial;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.footer-menu-two{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.footer-menu-two ul{
+  margin: 0px;
+  padding:0px;
+  text-align: center;
+}
+
+.footer-menu-two ul li{
+  display: inline-block;
+  margin: 0px 15px;
+}
+
+.footer-menu-two ul li a{
+  font-family: arial;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+.footer-bottom{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background:  #808080;
+  padding: 10px;
+}
+
+.footer-bottom p{
+  font-family: arial;
+  font-size:14px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer-bottom p a{
+  color: #fff;
+
+}
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg nav_style p-3">
+  <a class="navbar-brand pl-5" href="#">COVID-19</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto pr-5">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="#aboutid">ABOUT</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="#detectid">DETECT</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="#sympid">SYMPTOMS</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="#previd">PREVENTION</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="#contactid">CONTACT US</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+</nav>
+
+
+
+
+
+
+
+<!-- Logo & Main Div -->
+        <div class="main_header">
+            <div class="row w-100 h-100">
+                <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+                    <div class="leftside  w-100 h-100 d-flex justify-content-center align-items-center">
+                        
+                        <img  src="{{ url_for('static', filename='images/back.png')}}">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1">
+                    <div class="rightside  w-100 h-100  d-flex justify-content-center align-items-center">
+                        <h1> Stay Home   Stay Safe  Fight Together Against Cor<span class="corona_rotate"><img  src="{{ url_for('static', filename='images/corona.png')}}"></span>na Virus </h1>
+                        
+                    </div>  
+
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+
+ <!-- Lastest Update -->
+        <section class="corona_update">
+            <div class="mb-3">
+                <h3 class="text-capitalize text-center"></br> COVID-19 Update in <span class="update">INDIA</span> </br></h3>
+
+            </div>
+            <div class="d-flex justify-content-around align-items-center count_style">
+                
+                <div>
+                    <h1 class="count"> 4281</h1>
+                    <p class="text-capitalize"> Active Covid-19 cases </p>
+                </div>
+                <div>
+                    <h1 class="count"> 319 </h1>
+                    <p class="text-capitalize"> Cured/Discharged cases </p>
+                </div>
+                <div>
+                    <h1 class="count"> 111 </h1>
+                    <p class="text-capitalize"> Death Cases </p>
+                </div>   
+                  
+
+                <div class="update_button ">
+
+                   <a href="https://www.mohfw.gov.in/" class="button">Latest Update</a>
+                   
+                </div>
+            </div>
+            </br></br>
+        </section> 
+
+
+
+        <!-- About -->
+        <section class="about_corona">
+            <div class="container-fluid  pt-5 pb-5" id="aboutid">
+                <div class="section_header text-center mb-5 mt-5">
+                    <h1> About COVID-19 </h1>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-lg-5 col-md-6 col-12 ml-5">
+                        <img  src="{{ url_for('static', filename='images/coronavirus_about.png')}}"alt="aboutcovid" class="about pl-5 img-fluid">
+                        
+                    </div>
+                    <div class="w-100 h-100 col-lg-6 col-md-6 col-12">
+                        <h2><b> What is COVID-19 (Corona-Virus)? </b><br>
+                            <span class="text-primary"> According to World Health Organization (WHO) </span>
+                        </h2>
+                        <p> Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+                            Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment. Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness. </p>
+                        <p> The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).
+
+                        </p>
+                        <a class="btn_2 " href="#">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>  
+
+
+
+          <!-- DETECT -->
+          <section class="Detect_corona">
+            <div class="container-fluid  pt-5 pb-5" id="detectid">
+                <div class="section_header text-center mb-5 mt-5">
+                    <h1> DETECTION</h1>
+                </div>
+                <div class="row pt-5">
+                    <div class="detection col-lg-5 col-md-6 col-12 ml-5">
+                      <img  src="{{ url_for('static', filename='images/detection.jpg')}}" height="700" width="500" class="about pl-5 img-fluid">
+                        
+                    </div>
+                    <div class="w-100 h-100 col-lg-6 col-md-6 col-12 justify-content-center align-items-center  ">
+                        </br><h2><b> Upload your X-RAY image here.</b></h2></br>
+                         <h2> <a>  we will predict your score </a></br></h2></br>
+                          <b>COVID Positive if positive > 0.5 ==> </b><a>consult the specialist</a> </br>
+                          <b>COVID Negative if positive < 0.5 ==> </b><a>Don't Panic </a> </br></br></br>
+
+                              <form method=post enctype=multipart/form-data>
+                              <input type=file name=file >
+                              <input class="btn" type=submit value="start Analyse">
+                            </form>
+                       
+                        </br></br></br>
+                        
+
+
+                        
+                    
+
+                </div>
+            </div>
+        </section> 
+
+
+
+         <!-- Symptoms -->
+        <section class="symtoms_corona">
+            <div class="container-fluid pt-5 sub_section pb-5" id="sympid">
+                <div class="section_header text-center mb-5 mt-4">
+                    <h1> COVID-19 Symtoms </h1>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12 mt-5">
+                            <figure class="text-center">
+                              <img  src="{{ url_for('static', filename='images/fever.png')}}" alt="Fever" class="img-fluid" width="120" height="120">
+                                
+                                <figcaption> Fever </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 mt-5">
+                            <figure class="text-center">
+                              <img  src="{{ url_for('static', filename='images/cough.jpg')}}" alt="Fever" class="img-fluid" width="120" height="120">
+                                
+                                <figcaption> Cough </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 mt-5">
+                            <figure class="text-center">
+                              <img  src="{{ url_for('static', filename='images/breath.png')}}" alt="Fever" class="img-fluid" width="120" height="120">
+                                
+                                <figcaption> Difficulty in Breathing </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 mt-5">
+                            <figure class="text-center">
+                              <img  src="{{ url_for('static', filename='images/cold.jpeg')}}" alt="Fever" class="img-fluid" width="120" height="120">
+                               
+                                <figcaption> Cold & Cough </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 mt-5">
+                            <figure class="text-center">
+                              <img  src="{{ url_for('static', filename='images/runny-nose.png')}}" alt="Fever" class="img-fluid" width="120" height="120">
+                                
+                                <figcaption> Runny-Nose </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 mt-5">
+                            <figure class="text-center">
+                              <img  src="{{ url_for('static', filename='images/sick.jpeg')}}" alt="Fever" class="img-fluid" width="120" height="120">
+                                
+                                <figcaption> Sick/Tiredness </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Prevention -->
+        <section class="prevent_corona">
+            <div class="container-fluid sub_section pt-5 pb-5" id="previd">
+                <div class="section_header text-center mb-5 mt-4">
+                    <h1> 3 easy-Steps to Prevent Nobel Corona Virus </h1>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12 mt-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <figure class="text-center">
+                                     <img  src="{{ url_for('static', filename='images/hwash.png')}}" alt="Wash Hand" class="img-fluid" width="90" height="90">
+                                        
+                                    </figure>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <p class="text-align-left"> Wash Your Hands Properly with soap or alcohol-based sanitizer </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 mt-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <figure class="text-center">
+                                      <img  src="{{ url_for('static', filename='images/quarantine.png')}}" alt="Home Quarantine" class="img-fluid" width="90" height="90">
+                                        
+                                    </figure>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <p class="text-align-left"> Avoid close contact with People (1 meter or 3 feets),
+                                        Home Quarantine Yourself for till <span class="text-primary"> 14th April </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 mt-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <figure class="text-center">
+                                      <img  src="{{ url_for('static', filename='images/mask.png')}}" alt="Wear Mask" class="img-fluid" width="90" height="90">
+                                        
+                                    </figure>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-12">
+                                    <p class="text-align-left"> Cover your Nose and Mouth with Mask, fix your elbow while coughing and sneezing </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="prevention_info">
+                            According to WHO : The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+
+
+
+        <!-- Contact with us -->
+        <section class="contact">
+            <div class="container-fluid pt-5 pb-5" id="contactid">
+                
+                <div class="container">
+                    <div class="row d-flex  ">
+                        <div class="  col-lg-10 d-flex offset-lg-2 col-12 ">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeal1XxnXAvert41UItFS8ITrPQte1l71vY-mjEeYC1iQuUSw/viewform?embedded=true" width="750" height="1050" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfsvzuUf01zoyxf7rdfMcR3o7-7a8B3S5SZLeeBXpOuDcuEHA/viewform?embedded=true" width="750" height="1050" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                           
+                                   
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+            
+        <!-- Top Cursor -->
+        <div class="container scrolltop float-right pr-5">
+            <i class="fa fa-arrow-up" aria-hidden="true" onclick="topFunction()" id="myBtn"></i>
+        </div>
+        
+
+
+        <!-- footer -->
+    <footer>
+    <div class="footer_main_div">
+    <h3 class="text-center" >Welcome to COVID-19 DETECTION WEBSITE !!</h3>
+   <p class="text-center">Upload Your X-RAY And Get The Result : COVID + or COVID -</p>
+   <p class="text-center"> As always "Prevention is better than cure".so in this COVID-19 pandemic,we are just trying to help citizens to maintain the basic pevention i.e. SOCIAL DISTANCING.</br>If the symptonms are in favour of covid-19 . </br>Just get a X-RAY Done and analyse on this platform if result is POSITIVE  then consult the SPECIALIST otherwise </br>"DON'T PANIC"</br>!!  STAY HOME , STAY SAFE  !! </p>
+    <div class="join text-center "><a href="#detectid"  >UPLOAD YOUR X-RAY →</a></div>
+  <div class="footer-social-icons">
+      <ul>
+          
+          <li><a href="https://www.linkedin.com/in/ruchir-toshniwal-328b92152" target="blank"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/ruchirtoshniwal" target="blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="link https://t.me/ruchirtoshniwal" target="blank"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+      </ul>
+  </div>
+
+  <div class="footer-menu-one">
+      <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#aboutid">SYMPTOMS</a></li>
+          <li><a href="#sympid">Services</a></li>
+          <li><a href="#detectid">DETECT</a></li>
+          <li><a href="#previd">PREVENTION</a></li>
+        
+          <li><a href="#contactid">Contact us</a></li>  
+
+      </ul> 
+  </div>
+
+  <div class="footer-menu-two">
+       
+  </div>
+
+  <div class="footer-menu-two">
+      <ul>
+          <li><a href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses">FAQ</a></li>
+          <li><a href="#contactid">Query</a></li>
+
+    
+
+      </ul> 
+  </div>
+
+   </div>
+   <div class="footer-bottom">
+    <p>Proudly Design by: <a href="#">RUCHIR TOSHNIWAL</a></p>
+
+  </div>
+
+
+
+         <!-- JavaScript -->
+        <script>
+            //JQuery for Counter
+            $('.count').counterUp({
+                delay: 10,
+                time: 3000
+            })
+            //JavaScript for Arrow button
+            mybutton = document.getElementById("myBtn");
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </body>
+
+
+
+
+
+
+
+
+
+
+        
+</body>
+</html>
+
+
+
