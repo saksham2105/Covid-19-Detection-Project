@@ -1,18 +1,3 @@
-import pyrebase
-
-config = {
-    "apiKey": "AIzaSyCmV8sCbek_w54QklHvvinjw_DvBoxMQ_U",
-    "authDomain" : "covidetect19.firebaseapp.com",
-    "databaseURL" : "https://covidetect19.firebaseio.com",
-    "projectId" : "covidetect19",
-    "storageBucket" : "covidetect19.appspot.com",
-    "messagingSenderId" : "60972454754",
-    "appId" : "1:60972454754:web:a5bf174d3e98ef5645923b"
-}
-
-firebase = pyrebase.initialize_app(config)
-
-storage = firebase.storage()
 
 
 
@@ -97,11 +82,7 @@ def predict():
                 'positive': result[0],
                 'negative': result[1]
             }
-            resu = result['positive']
-            if resu > 0.5:
-                 storage.child('covid/' + upload.filename).put(upload)
-            else:
-                 storage.child('Normal/' + upload.filename).put(upload)    
+              
             return  render_template('res.html',res= result)
         else:
             return '<h1> bad</h1>'
